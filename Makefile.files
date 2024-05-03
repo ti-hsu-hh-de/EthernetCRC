@@ -1,0 +1,1 @@
+VHDL_SRC+= src/EthernetCRC.vhd,hsuti_ethernet_crc_lib
