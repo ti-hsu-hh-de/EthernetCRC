@@ -1,0 +1,22 @@
+---
+
+kind: pipeline
+type: kubernetes
+name: mirror-to-github
+steps:
+  - name: github-mirror
+    image: byterazor/drone-github-mirror:latest
+    pull: always
+    settings:
+      GH_TOKEN: 
+        from_secret: GH_TOKEN
+      GH_REPO: "ti-hsu-hh-de/EthernetCRC"
+      GH_REPO_DESC: "basic EthernetCRC VHDL Module"
+      GH_REPO_HOMEPAGE: "https://github.com/ti-hsu-hh-de/"
+
+--- 
+kind: secret
+name: GH_TOKEN
+get:
+  path: github
+  name: token
