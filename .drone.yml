@@ -9,7 +9,7 @@ steps:
     pull: always
     settings:
       GH_TOKEN: 
-        from_secret: GH_TOKEN
+        from_secret: github
       GH_REPO: "ti-hsu-hh-de/EthernetCRC"
       GH_REPO_DESC: "basic EthernetCRC VHDL Module"
       GH_REPO_HOMEPAGE: "https://github.com/ti-hsu-hh-de/"
